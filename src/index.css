@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap");
+
+:root {
+  --primary-white: #d5dfe5;
+  --secondary-white: #f0f2ef;
+  --primary-black: #121212;
+  --fourth-green: #41e2ba;
+  --third-green: #4ac776;
+  --secondary-green: #33c065;
+  --primary-green: #1db954;
+  --dark-green: #00af54;
+
+  --primary-font: Rowdies, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  color: var(--primary-white);
+  font-family: var(--primary-font);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--primary-black);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  font-size: 1.3rem;
+}
+
+.favorites > div {
+  min-height: 50rem;
+}
+
+.musics {
+  max-height: 50rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+  gap: 1rem;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+.musics > .music {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-radius: 1rem;
+}
+
+.music > main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.music > img {
+  width: 10rem;
+  overflow: hidden;
+  border-radius: 1rem 0rem 0rem 1rem;
+}
+
+.music > button {
+  font-size: 3rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.musics::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.musics::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.musics::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    123deg,
+    var(--dark-green) 0%,
+    var(--fourth-green) 50%
+  );
+  border-radius: 24px;
+}
+
+.favorites > .musics {
+  background: linear-gradient(
+    135deg,
+    var(--dark-green) 0%,
+    var(--fourth-green) 100%
+  );
+}
+
+.favorites > .musics > .music {
+  background-color: var(--primary-black);
+}
+
+.favorites > .musics::-webkit-scrollbar-thumb {
+  background: var(--primary-white);
+}
+
+.favorites > .musics > .music > button {
+  display: none;
+}
+
+.music > .musics > .music {
+  background: linear-gradient(var(--primary-black), var(--primary-black))
+      padding-box,
+    linear-gradient(var(--dark-green) 0%, var(--fourth-green) 100%) border-box;
+  border: 4px solid transparent;
+  border-radius: 1rem;
+}
+
+.music > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.music > h2 {
+  padding: 1rem;
+  font-size: 3rem;
+}
+.favorites > h2 {
+  padding: 1rem;
+  font-size: 3rem;
+}
